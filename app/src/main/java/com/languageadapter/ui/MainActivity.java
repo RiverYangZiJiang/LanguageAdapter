@@ -2,6 +2,7 @@ package com.languageadapter.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import com.languageadapter.R;
@@ -9,11 +10,15 @@ import com.languageadapter.com.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
+    private static final String TAG = "MainActivity";
+
     TextView tvOpenTestOther;
     TextView tvOpenLanguageSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvOpenTestOther = (TextView) findViewById(R.id.tvOpenTestOther);
